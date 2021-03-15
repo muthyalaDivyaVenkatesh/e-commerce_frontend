@@ -1,0 +1,35 @@
+<div class="search">
+ <a style="margin-left:20px;" [routerLink]="['/shop']" routerLinkActive="router-link-active"  style="color: white;">MDV-CART</a>   
+<input type="text" name="" id="" class="search__input" placeholder="watch">
+<i class="fa fa-search search__input__icon" aria-hidden="true" ></i>
+<button [routerLink]="['/login']" mat-flat-button  style="margin-left:60px;padding:0 30px">Login</button>
+<i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style="padding-left: 300px;" ></i>
+</div>
+
+<div fxLayout="row">
+    <div fxLayout="column" fxFlex="25">
+    <section class="img-section" > 
+    <img src="assets/images/watch-2.jpg" alt="">
+    </section>
+    <section class="filter__section">
+   <mat-card>
+       FILTERS
+       <hr>
+      <h5>CATEGORIES</h5> 
+      <p>price</p>
+      <p>Insert mat-slider</p>
+   </mat-card>
+    </section>
+    </div>
+    <div fxLayout="column"  fxFlex="70" class="product-section">
+     <h3>Showing 1-{{count}} of {{count}} </h3>
+     <section fxLayout="row" fxLayoutGap="30px">
+         <h4>Sort By</h4>
+         <p><a (click)="getByLowprice()"> Price Low To High </a></p>
+         <p><a (click)="getByHighPrice()">Price High To Low</a></p>
+     </section>
+     <section>
+         <app-product></app-product>
+     </section>
+    </div>
+</div>

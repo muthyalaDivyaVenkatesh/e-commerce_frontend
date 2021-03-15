@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">E-cart</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a [routerLink]="['/products']" routerLinkActive="router-link-active" >Products</a></li>
+        <li><a [routerLink]="['/addproduct']"> Add Product</a></li>
+        <li><a  style="padding-left:800px">
+          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" [routerLink]="['/cart']" routerLinkActive="router-link-active" >
+            <sup>1</sup>
+          </i>
+         <!-- <pre>1</pre> -->
+        </a></li>
+      </ul>
+    </div>
+  </nav>

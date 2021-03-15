@@ -1,0 +1,25 @@
+<!-- {{cartProducts.length}} we are looking at sometthing -->
+<!-- {{cartProducts[0] |json}} -->
+<div fxlayout="column" fxlayoutAlign="center">
+    <div *ngIf="cartProducts.length>0;else elseBlock">
+    <div *ngFor="let list of cartProducts">
+        <!-- <p>{{list}}</p> -->
+      <h3 style="padding-left: 300px;padding-top:30px;font-weight: 500;font-size:25px">ITEM SUMMARY</h3>
+        <section class="item-list">
+            <span style="margin-right: 40px;" class="item">Item Name : {{list.title}}</span>
+            <!-- <button (click)="decrement()" class="btn btn-default">-</button> -->
+            <label>Qty</label>
+            <input type="number" name="Quantity" [value]="cartProducts.qty || 1" style="width:40px;margin-right:50px" (change)="changeInQty($event)"/>
+            <!-- <button class="btn btn-default" (click)="Increment()">+</button> -->
+            <span class="item">Price:  {{list.price}}</span>
+        </section>
+    <button mat-button color="primary" class="total"  (click)="navigateToCheckout()"> 
+    <h2 >Total : {{cartProducts[0].qty * cartProducts[0].price }}</h2>
+</button>
+<br>
+<button  mat-raised-button (click)="navigateToCheckout()" style="margin-left: 430px;" color="primary">
+    CHECKOUT
+</button>
+</div>
+</div>
+<ng-template  #elseBlock >There Is No Product IN Cart</ng-template>

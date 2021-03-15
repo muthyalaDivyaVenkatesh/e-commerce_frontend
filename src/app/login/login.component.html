@@ -1,0 +1,63 @@
+
+<div fxLayout="row" fxLayoutAlign="center center"  class="login_card">
+<div class="card" [@cardFlip]="state">
+    <div class="face back" >
+      <form  #loginForm="ngForm" (ngSubmit)="onSubmit($event,loginForm)">
+        <div fxLayoutAlign="center" fxLayout="column" style="padding: 10px;" class="form-group">
+       
+        <h2 style="text-align: center">Login</h2>
+        <p>{{login}}</p>
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput  type="text" class="form-control" name="email" [(ngModel)]="logIn.email">
+            <i  matPrefix class="fa  fa-envelope"></i>
+
+          </mat-form-field >
+        
+          <mat-form-field   style="margin-top:20px">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" class="form-control"  name="password" [(ngModel)]="logIn.password" #password> 
+            <i matPrefix class=" fa fa-eye-slash" aria-hidden="true" (click)="password.type=password.type=='password'?'text':'password'"></i>
+          </mat-form-field>
+ 
+          <button mat-flat-button color="primary" button="submit">Login</button>
+              <h3 style="text-align: center;"><a (click)="cardClicked()">New To E-Cart Plese SignIn</a></h3>
+               <h4 style="text-align: center"><a  [routerLink]="['../resetPassword']"> Forgot Password</a></h4>
+              
+         </div>
+        </form>
+    </div>
+
+    <div class="face front">
+      <form #signinForm=ngForm (ngSubmit)="onSignIn($event,signinForm)">
+        <div fxLayoutAlign="center" fxLayout="column" style="padding: 10px;" class="form-group">
+            <h2 style="text-align: center">SignIn</h2>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput      name="signinEmail" class="form-control" [(ngModel)]="signIn.email">
+              </mat-form-field>
+            
+              <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput  name="signinName" class="form-control" [(ngModel)]="signIn.name">
+              </mat-form-field>
+
+              <mat-form-field >
+                <mat-label>Password</mat-label>
+                <input matInput type="password" name="signinPassword" class="form-control" [(ngModel)]="signIn.password">
+              </mat-form-field>
+     
+              <mat-form-field >
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" name="signinConformPassword" class="form-control"  [(ngModel)]="signIn.password">
+              </mat-form-field>
+
+              <div fxLayout="row" fxLayoutGap="20px">
+              <button mat-flat-button color="primary" type="submit" class="sigin__button" >SignIn</button>
+                  <h3><a (click)="cardClicked()" style="padding: 10px;">Alredy User plese Login</a></h3>
+               </div>
+             </div>
+       </form>
+    </div>
+</div>
+</div>

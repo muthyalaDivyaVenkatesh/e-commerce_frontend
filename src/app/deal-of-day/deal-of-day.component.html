@@ -1,0 +1,14 @@
+<div class="deal" >
+<mat-card>
+    <div fxLayout="row">
+    <mat-card-header>Deal Of The Day</mat-card-header>
+    <mat-card-header>Time Remaining  <span>{{hours}}:{{minutes}}:{{seconds}}</span></mat-card-header>
+    </div>
+</mat-card>
+<mat-card-content >
+    <span *ngFor="let item of items" fxFlex>
+        <img [src]="item" alt="" style="width:200px;height:200px;display: inline;" >
+    </span>
+</mat-card-content>
+</div>
+

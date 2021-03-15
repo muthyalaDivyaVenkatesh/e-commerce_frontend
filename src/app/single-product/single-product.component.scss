@@ -1,0 +1,27 @@
+.product{
+    display: block;
+    margin: 10px;
+
+    img {
+        background-repeat: no-repeat;
+        margin:10px;
+    }
+
+    img:hover{
+        background-repeat: no-repeat;
+        cursor:zoom-in;
+        border:0;
+        box-shadow:2px 2px 7px 2px rgba(130,130,130,.7),-2px -2px 7px 2px rgba(130,130,130,1)
+    }
+}
+
+#prview{
+    margin-top: 10px;
+	border:1px solid black;
+	width:350px;
+	height:500px;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+
+}

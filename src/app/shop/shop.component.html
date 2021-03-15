@@ -1,0 +1,21 @@
+<div class="shop">
+<app-navbar></app-navbar>
+<div class="shop__child">
+<div class="subcate" fxLayout="row" fxLayoutGap="30px">
+  <div *ngFor="let item of list" fxFlex>
+       <div>
+      <span class="material-icons">{{item}}</span>
+      </div>
+      <hr>
+  </div>
+</div>
+<div >
+  <app-image-slider></app-image-slider>
+</div>
+<app-deal-of-day></app-deal-of-day>
+<div>
+  <app-footer></app-footer>
+</div>
+</div>
+</div>
+

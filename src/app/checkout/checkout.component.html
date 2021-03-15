@@ -1,0 +1,37 @@
+<div class="checkout_parent">
+<button type="button" class="collapsible" #collapsible>LOGIN</button>
+<div class="content">
+    <p>LOGIN</p>
+</div>
+
+
+<button type="button" class="collapsible">DELEIVERY ADDRESS</button>
+<div class="content address"  >
+    <form style="width:80%" fxLayout="row" fxLayoutGap="70px" class="address" [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+    <ng-container  *ngFor="let name of names">
+        
+        <mat-form-field appearance="legacy" fxFlex="40%"*ngIf="name == 'address'" >
+            <mat-label>{{name}}</mat-label>
+            <textarea type="text" matInput formControlName="address"></textarea>
+        </mat-form-field>
+
+    <mat-form-field appearance="legacy" fxFlex="40%" *ngIf ="name !== 'address'">
+        <mat-label>{{name}}</mat-label>
+        <input type="text" matInput [formControlName]="name">
+    </mat-form-field>
+</ng-container>
+</form>
+<button mat-raised-button style="display: block;background: #fb641b;" type="button" (click)="onSubmit()">SAVE AND DELIVER</button>
+</div>
+
+<button type="button" class="collapsible">ORDERSUMMARY</button>
+<div class="content order" style="text-align: center;">
+         <img src="/assets/images/name.jpg" style="width:200px;padding:30px" >
+         <h4 style="font-size: 16px;">ProductName: getFromCart</h4>
+         <h4 style="font-size: 16px;">Price : getFromCart</h4>
+  <button type="button" mat-raised-button color="primary" (click)="proceedToCheckout()">PROCEEDTOCHECKOUT</button>   
+</div>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+.item-list{
+    margin-top: 30px;
+    margin-left:100px;
+    padding-right: 80px !important;
+    width:800px;
+    background-color: #D3D3D3;
+    border:5px black;
+    padding:25px;
+    padding-left:100px;
+    border-radius: 10px;
+    // box-shadow: ;
+    box-shadow:5px 5px ,
+}
+.item {
+    font-size: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #212121;
+}
+
+.total {
+    margin-top: 20px;
+    margin-left:400px
+}

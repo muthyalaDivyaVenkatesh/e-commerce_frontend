@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="img-zoom-container" #imgContainer style="margin: 10px" (mouseover)="mouseIn()" (mouseout)="mouseOut()"  style="display: flex;">
+  <img id="myImage" [src]="productImg"
+    width="300" height="240" alt="Girl" #image />
+ 
+    <div id="myResult" class="img-zoom-result" #result > </div>
+
+
+</div>
+<div  class="text-align" style="width:700px;padding-left:250px;padding-top:20px ;">
+  <span><b>Title</b>:{{productDetails.title}}</span>
+  <br>
+  <span><b>Price</b>:{{productDetails.price}}</span>
+  <br>
+  <span><b>Description</b>:{{productDetails.content}}</span>
+  
+  <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quibusdam id sequi? Consectetur, tenetur eum ad ullam ex necessitatibus itaque error odit ipsum dolore dolorum laboriosam dolores nulla. Earum, sint. -->
+</div>
+
+
+<button mat-flat-button color="primary" class="cartButton" (click)="moveToCart($event)">AddToCart</button>
